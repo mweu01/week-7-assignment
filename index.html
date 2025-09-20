@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive CSS & JS Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Welcome to My Interactive Page 🎨</h1>
+
+  <!-- Part 1: Button with hover and animation -->
+  <button id="animateBtn">Animate Box</button>
+
+  <!-- Part 3: Box to animate -->
+  <div id="box" class="box"></div>
+
+  <!-- Part 2: Input and result display -->
+  <div class="calculator">
+    <input type="number" id="inputNum" placeholder="Enter a number" />
+    <button onclick="calculateDouble()">Double It</button>
+    <p id="result"></p>
+  </div>
+
+  <!-- Part 3: Modal Example -->
+  <button id="openModal">Open Modal</button>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <p>This is a sliding, fading modal!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
