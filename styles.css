@@ -1,0 +1,87 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Part 1: Box Animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin-top: 20px;
+  transition: transform 1s ease;
+}
+
+/* Triggered class from JS */
+.animate {
+  transform: rotate(360deg) scale(1.5);
+}
+
+/* Keyframes example */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
